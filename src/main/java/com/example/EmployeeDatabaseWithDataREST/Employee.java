@@ -12,6 +12,7 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -26,6 +27,7 @@ public class Employee {
 	private int empid;
 	
 	@Column(name = "empname")
+	@OrderBy("ASC")
 	private String empname;
 	
 	@Column(name = "empsalary")
